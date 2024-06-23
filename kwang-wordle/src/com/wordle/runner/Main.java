@@ -81,7 +81,9 @@ public class Main {
             b++;
           }
 
-          if
+          if (s == 0 && b == 0) {
+            System.out.println("nothing");
+          }
           System.out.println("[" + s + "S" + b + "B" + "]");
           System.out.println("기회는 " + i + "번 남았습니다.");
         }

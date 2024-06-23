@@ -13,7 +13,7 @@ public class Main {
 
     //변수 초기화
     char answer0, answer1, answer2, answer3, result0, result1, result2, result3;  // 정답과 답변을 담을 변수
-    String resultString = "java";  // 임시 답변
+    String resultString = WordPicker.getRandomWord();  // 임시 답변
     int s, b;  // strike와 ball카운트
 
     // 사용자 입력 받기
@@ -25,17 +25,17 @@ public class Main {
 
       // 기회를 모두 소모하면 킹받는 문구 출력
       if (i == -1) {
-        System.out.println("그걸 몰라?");
+        System.out.println("그걸 몰라? 정답은 " + resultString + "지롱~!");
         break;
       }
 
-      // 기회가 있을 경우 정답맞히기
       try {
         s = b = 0;
         System.out.print("단어를 입력해주세요: ");
         String answerString = sc.nextLine();
         System.out.println("입력받은 문자열 : " + answerString);
 
+        // 기회가 있을 경우 정답맞히기
         if (answerString.length() != 4) {
 
           throw new InvalidLengthException("4글자 단어를 입력해주세요");
